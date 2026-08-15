@@ -2,15 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-:root { --paper:#f7efe1; --ink:#3d2921; --postal:#a63632; }
+:root { --paper:#f5e8d0; --ink:#3a2924; --postal:#641f2b; --wine:#4a1822; --orange:#d98a45; --navy:#17263a; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
-body { margin:0; background:var(--paper); color:var(--ink); font-family:ui-sans-serif,system-ui,sans-serif; }
-body:before { content:''; pointer-events:none; position:fixed; inset:0; opacity:.33; z-index:-1; background-image:radial-gradient(rgba(92,59,36,.12) .55px,transparent .7px); background-size:5px 5px; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:ui-sans-serif,system-ui,sans-serif; overflow-x:hidden; }
+body:before { content:''; pointer-events:none; position:fixed; inset:0; opacity:.5; z-index:-1; background-image:linear-gradient(rgba(100,31,43,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(100,31,43,.055) 1px,transparent 1px),radial-gradient(rgba(92,59,36,.12) .55px,transparent .7px); background-size:34px 34px,34px 34px,5px 5px; }
 ::selection { background:#d9a69c; color:#3d2921; }
 .paper { background:rgba(255,251,242,.78); border:1px solid rgba(83,53,33,.18); box-shadow:0 12px 28px rgba(79,48,30,.10); }
 .eyebrow { font-family:Georgia,serif; letter-spacing:.16em; text-transform:uppercase; font-size:.7rem; color:#9d4b40; }
 .rule { height:1px; background:linear-gradient(90deg,transparent,#b58b72,transparent); }
 .stamp { border:1px dashed #a75a4e; background:#f5e4c9; }
+.math-surface{position:relative;isolation:isolate;overflow:hidden}.math-surface:before{content:'x² + y² = r²   ·   Σ n   ·   f(x)   ·   π   ·   y = ax²';position:absolute;inset:auto -10% 7% auto;color:rgba(100,31,43,.10);font:italic 1.1rem Georgia,serif;letter-spacing:.18em;white-space:nowrap;transform:rotate(-7deg);z-index:-1}.float-math{animation:float 6s ease-in-out infinite}.float-math-slow{animation:float 9s ease-in-out -2s infinite}.draw-path{stroke-dasharray:520;stroke-dashoffset:520;animation:draw 1.8s cubic-bezier(.2,.8,.2,1) forwards}.rise{animation:rise .55s both}.rise-delay{animation:rise .7s .14s both}.pulse-seal{animation:seal 2.8s ease-in-out infinite}@keyframes draw{to{stroke-dashoffset:0}}@keyframes float{50%{transform:translateY(-13px) rotate(2deg)}}@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}@keyframes seal{50%{box-shadow:0 0 0 10px rgba(100,31,43,.08);transform:scale(1.04)}}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
 input,textarea,select { font:inherit; }
 button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible { outline:3px solid #bc7164; outline-offset:3px; }
