@@ -1,0 +1,3 @@
+import { SiteHeader } from './site-header';
+export function PageShell({children}:{children:React.ReactNode}) {return <><SiteHeader/><main className="mx-auto max-w-7xl px-5 py-12 md:py-16">{children}</main><footer className="mt-8 border-t border-ink/15 px-5 py-8 text-center text-xs text-ink/60">Group 1 · Pre-Calculus · Beyond the Graph: The X-Y Files</footer></>}
+export function PageHeading({label,title,description}:{label:string;title:string;description:string}){return <section className="mb-10 max-w-2xl"><p className="eyebrow">{label}</p><h1 className="mt-2 font-display text-4xl leading-tight md:text-5xl">{title}</h1><p className="mt-4 leading-7 text-ink/70">{description}</p></section>}

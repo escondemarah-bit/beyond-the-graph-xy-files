@@ -1,0 +1,2 @@
+import {EmptyState} from '@/components/empty-state'; import {PageHeading,PageShell} from '@/components/page-shell';
+export default function Outputs(){return <PageShell><PageHeading label="The works" title="Output Archive" description="Official group outputs and performance tasks, with process records, reflections, and actual contribution notes."/><EmptyState title="No outputs have been added yet." detail="Authorized members can add official group work to this archive."/></PageShell>}

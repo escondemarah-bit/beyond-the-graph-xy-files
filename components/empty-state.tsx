@@ -1,0 +1,2 @@
+import { Archive } from 'lucide-react';
+export function EmptyState({title='Nothing here yet.',detail='Start documenting your Pre-Calculus journey.'}:{title?:string;detail?:string}){return <div className="paper flex min-h-44 flex-col items-center justify-center rounded-xl px-6 text-center"><div className="stamp mb-3 grid size-10 place-items-center rounded-full"><Archive className="size-4 text-postal"/></div><h3 className="font-display text-lg">{title}</h3><p className="mt-1 max-w-sm text-sm text-ink/65">{detail}</p></div>}
