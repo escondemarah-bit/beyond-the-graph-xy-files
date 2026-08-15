@@ -1,6 +1,6 @@
 import {NextRequest,NextResponse} from 'next/server';
 import {supabaseAdmin} from '@/lib/supabase/admin';
-const valid=new Set(['topic','member']);
+const valid=new Set(['topic','member','media']);
 function fileKind(file:File){return file.type==='application/pdf'?'pdf':file.type.startsWith('image/')?'image':file.type.startsWith('video/')?'video':'file';}
 function bucket(kind:string){return kind==='video'?'videos':'documentation';}
 function clean(name:string){return name.replace(/[^a-zA-Z0-9._-]/g,'-');}

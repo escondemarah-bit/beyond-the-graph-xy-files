@@ -10,6 +10,8 @@ create table if not exists public.folder_files (
   created_at timestamptz default now()
 );
 create index if not exists folder_files_scope_idx on public.folder_files(folder_type,folder_key,created_at desc);
+alter table public.folder_files drop constraint if exists folder_files_folder_type_check;
+alter table public.folder_files add constraint folder_files_folder_type_check check (folder_type in ('topic','member','media'));
 
 create table if not exists public.group_checkins (
   id uuid primary key default gen_random_uuid(),
